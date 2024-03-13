@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Key</string>
+    <string name="set_password">Задайте пароль</string>
+    <string name="confirm">Подтвердите пароль</string>
+    <string name="next">Далее</string>
+    <string name="wrong_password">Неправильный пароль</string>
+    <string name="enter">Войти</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="add_site">Добавить сайт</string>
+    <string name="www_google_com">например, www.google.com</string>
+    <string name="password">пароль</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="show">пароль</string>
+    <string name="edit_site">Редактировать</string>
+    <string name="site_list">Список сайтов</string>
+    <string name="show_bio">Использовать биометрию?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="use_finger">Для входа в приложение используйте отпечаток пальца</string>
+</resources>
