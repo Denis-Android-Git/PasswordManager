@@ -71,18 +71,19 @@ fun MainScreen(
         ) {
             TopAppBar(
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary
+                    containerColor = MaterialTheme.colorScheme.secondaryContainer
                 ),
                 modifier = Modifier
                     .statusBarsPadding()
                     .clip(RoundedCornerShape(bottomStart = 8.dp, bottomEnd = 8.dp)),
                 title = {
-                    Box(modifier = modifier.fillMaxWidth()) {
+                    Box(
+                        modifier = modifier.fillMaxWidth(),
+                        contentAlignment = Alignment.Center
+                    ) {
                         Text(
                             text = stringResource(R.string.site_list),
                             style = MaterialTheme.typography.titleLarge,
-                            modifier = Modifier
-                                .align(Alignment.Center),
                             fontSize = 22.sp
                         )
                     }
@@ -92,7 +93,7 @@ fun MainScreen(
             LazyColumn(
                 modifier = Modifier
                     .navigationBarsPadding()
-                    .padding(16.dp)
+                    .padding(6.dp)
             ) {
                 items(list.value,
                     key = {

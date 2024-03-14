@@ -7,14 +7,18 @@ import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -62,8 +66,17 @@ fun Item(
     }
 
     Card(
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer
+        ),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 8.dp,
+            pressedElevation = 5.dp
+        ),
         modifier = modifier
+            .height(50.dp)
             .padding(3.dp)
+            .fillMaxWidth()
             .onSizeChanged {
                 itemHeight = with(density) { it.height.toDp() }
             }
@@ -88,34 +101,47 @@ fun Item(
                 .fillMaxWidth()
                 .height(80.dp),
         ) {
-            AsyncImage(
-                model = "https://${item.url}/favicon.ico",
-                error = painterResource(id = R.drawable.ic_launcher_foreground),
-                contentDescription = null,
+            Card(
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier
-                    .width(50.dp)
-                    .height(50.dp)
-                    .padding(start = 6.dp)
                     .align(Alignment.CenterStart)
-            )
+                    .padding(start = 6.dp),
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = 10.dp
+                )
+            ) {
+                AsyncImage(
+                    model = "https://${item.url}/favicon.ico",
+                    error = painterResource(id = R.drawable.ic_launcher_foreground),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .width(30.dp)
+                        .height(30.dp)
+                )
+            }
             Text(
                 text = item.url, modifier = Modifier
-                    .padding(start = 70.dp)
-                    .align(Alignment.CenterStart)
+                    .padding(start = 50.dp)
+                    .align(Alignment.CenterStart),
+                fontSize = 13.sp
             )
 
             Button(
+                contentPadding = PaddingValues(),
+                shape = RoundedCornerShape(8.dp),
                 onClick = {
                     exposed = !exposed
                 },
                 modifier = Modifier
                     .align(Alignment.CenterEnd)
                     .padding(end = 6.dp)
+                    .height(30.dp)
+                    .width(130.dp)
 
             ) {
                 Text(
                     text = if (exposed) item.password else stringResource(R.string.show),
-                    fontSize = 10.sp,
+                    fontSize = 13.sp,
                     textAlign = TextAlign.Center
                 )
             }

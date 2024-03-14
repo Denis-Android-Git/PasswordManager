@@ -27,7 +27,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -56,7 +55,7 @@ fun AddScreen(
     ) {
         TopAppBar(
             colors = TopAppBarDefaults.topAppBarColors(
-                containerColor = MaterialTheme.colorScheme.primary
+                containerColor = MaterialTheme.colorScheme.secondaryContainer
             ),
             modifier = Modifier
                 .statusBarsPadding()
@@ -71,8 +70,7 @@ fun AddScreen(
                     ) {
                         Icon(
                             Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = null,
-                            tint = Color.White
+                            contentDescription = null
                         )
                     }
                     Text(
@@ -82,7 +80,6 @@ fun AddScreen(
                             .weight(1f)
                             .fillMaxSize()
                             .wrapContentSize(Alignment.CenterStart),
-                        color = Color.White,
                         fontSize = 22.sp
                     )
                     IconButton(
@@ -100,8 +97,7 @@ fun AddScreen(
                     ) {
                         Icon(
                             Icons.Filled.Check,
-                            contentDescription = null,
-                            tint = Color.White
+                            contentDescription = null
                         )
                     }
                 }
