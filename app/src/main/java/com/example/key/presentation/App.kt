@@ -15,7 +15,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.data.keygenerator.KeyGenerator
-import com.example.key.PREFS
 
 @RequiresApi(Build.VERSION_CODES.R)
 @Composable
@@ -30,12 +29,12 @@ fun Navigation(
         mutableStateOf("")
     }
 
-    val isFirstRun = sharedPreferences.getBoolean(PREFS, true)
+    val isFirstRun = sharedPreferences.getBoolean("isFirstRun", true)
 
     if (isFirstRun) {
         startDestination = "SetPasswordScreen"
         val editor = sharedPreferences.edit()
-        editor.putBoolean(PREFS, false)
+        editor.putBoolean("isFirstRun", false)
         editor.apply()
     } else {
         startDestination = "loginScreen"
