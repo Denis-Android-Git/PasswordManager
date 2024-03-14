@@ -128,7 +128,6 @@ fun EditScreen(
                 modifier = Modifier
                     .padding(top = 16.dp)
                     .fillMaxSize()
-                    .verticalScroll(rememberScrollState())
             ) {
                 OutlinedTextField(
                     isError = site.isEmpty(),

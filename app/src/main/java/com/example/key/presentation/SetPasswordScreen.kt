@@ -1,5 +1,6 @@
 package com.example.key.presentation
 
+import android.content.SharedPreferences
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -39,7 +40,8 @@ import java.io.FileOutputStream
 fun SetPasswordScreen(
     modifier: Modifier,
     keyGenerator: KeyGenerator,
-    navController: NavController
+    navController: NavController,
+    sharedPreferences: SharedPreferences
 ) {
 
     val context = LocalContext.current
@@ -108,6 +110,9 @@ fun SetPasswordScreen(
                     val file = File(context.filesDir, "1.txt")
                     val fos = FileOutputStream(file)
                     keyGenerator.encrypt(bytes, fos)
+                    val editor = sharedPreferences.edit()
+                    editor.putBoolean("isFirstRun", false)
+                    editor.apply()
                     navController.navigate("mainScreen")
                 },
                 enabled = password == confirmPassword && password.isNotEmpty() && confirmPassword.isNotEmpty()

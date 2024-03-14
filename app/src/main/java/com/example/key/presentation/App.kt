@@ -31,13 +31,10 @@ fun Navigation(
 
     val isFirstRun = sharedPreferences.getBoolean("isFirstRun", true)
 
-    if (isFirstRun) {
-        startDestination = "SetPasswordScreen"
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("isFirstRun", false)
-        editor.apply()
+    startDestination = if (isFirstRun) {
+        "SetPasswordScreen"
     } else {
-        startDestination = "loginScreen"
+        "loginScreen"
     }
 
     NavHost(navController = navController, startDestination = startDestination) {
@@ -56,7 +53,8 @@ fun Navigation(
             SetPasswordScreen(
                 modifier = modifier,
                 keyGenerator = keyGenerator,
-                navController = navController
+                navController = navController,
+                sharedPreferences = sharedPreferences
             )
         }
         composable(route = "loginScreen") {
