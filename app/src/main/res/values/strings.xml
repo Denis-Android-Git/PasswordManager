@@ -18,4 +18,7 @@
     <string name="yes">Да</string>
     <string name="no">Нет</string>
     <string name="use_finger">Для входа в приложение используйте отпечаток пальца</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="sure">Уверены?</string>
+    <string name="menu">Меню</string>
 </resources>
