@@ -17,10 +17,13 @@ Technology:
 
 Screenshots:
 
-![6](https://github.com/Lobiofrom/PasswordManager/assets/124072945/2076c291-aef2-4647-b2bb-1ffb3d820e43)
-![5](https://github.com/Lobiofrom/PasswordManager/assets/124072945/de5ff072-2e63-400f-af7f-d8a6b428dcfb)
 ![4](https://github.com/Lobiofrom/PasswordManager/assets/124072945/2920faaa-ade8-4533-990d-1a22648bfc0d)
-![3](https://github.com/Lobiofrom/PasswordManager/assets/124072945/5eea5b0c-805b-4f5c-9d60-63fa6dd2e20a)
-![2](https://github.com/Lobiofrom/PasswordManager/assets/124072945/d3917caa-ca8c-4cd9-b92c-e0a6b4f0e3e8)
 ![1](https://github.com/Lobiofrom/PasswordManager/assets/124072945/f8006ac3-3db7-411d-b3f2-cec34311c4ca)
+![7](https://github.com/Lobiofrom/PasswordManager/assets/124072945/35b849dc-4068-4675-8754-0c087a337a01)
+![6](https://github.com/Lobiofrom/PasswordManager/assets/124072945/c276f1e6-3351-4839-a301-4d83205827e2)
+![5](https://github.com/Lobiofrom/PasswordManager/assets/124072945/f8dd629c-518e-44c2-b934-f3114442394e)
+![4](https://github.com/Lobiofrom/PasswordManager/assets/124072945/12edb172-e357-491c-9ab6-588e8d1e28f7)
+![3](https://github.com/Lobiofrom/PasswordManager/assets/124072945/3a2c51b4-2687-4097-8177-ab3bb3b90639)
+![2](https://github.com/Lobiofrom/PasswordManager/assets/124072945/f5b919d7-4e59-4cec-8e8d-9734075e248b)
+![1](https://github.com/Lobiofrom/PasswordManager/assets/124072945/f37ff03d-8806-4009-bc0a-dc114fa9fe61)
 
